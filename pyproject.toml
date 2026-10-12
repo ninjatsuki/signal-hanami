@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "signal-hanami"
+version = "0.1.0"
+description = "Local signal intelligence pipeline for identifying high-value technical and business opportunities"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "ninjatsuki" }]
+dependencies = [
+  "httpx>=0.27",
+  "python-dotenv>=1.0",
+  "flask>=3.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
